@@ -1,4 +1,4 @@
-import express from 'express';
+import { express } from '../utils/commonImports';
 
 const exchangeController = require("../controllers/exchangeController");
 

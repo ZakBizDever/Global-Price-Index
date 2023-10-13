@@ -1,5 +1,4 @@
-import { Request, Response } from 'express';
-import { exchanges } from '../config/exchanges';
+import { Request, Response, exchanges } from '../utils/commonImports';
 
 const get_exchange = (req: Request, res: Response) => {
     const { name } = req.params;

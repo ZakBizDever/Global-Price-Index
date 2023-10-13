@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { ExchangeConfig } from '../config/exchanges';
+import { ExchangeConfig } from '../utils/commonImports';
 
 export class ExchangeService {
     private exchangeConfig: ExchangeConfig;
