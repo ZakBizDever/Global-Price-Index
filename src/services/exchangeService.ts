@@ -8,10 +8,14 @@ export class ExchangeService {
         this.exchangeConfig = config;
     }
 
-    async fetchOrderBook(pair: string) {
-        const { apiURI } = this.exchangeConfig;
+    async fetchOrderBook(pair: string, useWS: boolean = false) {
+        const { apiURI, implementedWebSocket } = this.exchangeConfig;
 
         try {
+            if (useWS && implementedWebSocket === true) {
+                return 'none';
+            }
+
             const response = await axios.get(apiURI, {});
 
             if (response.status === 200) {
