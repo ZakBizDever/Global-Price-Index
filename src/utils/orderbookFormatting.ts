@@ -9,13 +9,13 @@ export function extractAsksAndBids(obj: any, result: any = {}): any[] {
             }
         } else {
             for (const key in obj) {
-                if (key === 'asks') {
+                if (key === 'asks' || key === 'a') {
                     asks = obj[key];
                     const formattedAsks = asks.map((a: any) => Number(a[0]));
 
                     result.asks = formattedAsks;
                 }
-                if (key === 'bids') {
+                if (key === 'bids' || key === 'b') {
                     bids = obj[key];
                     const formattedBids = bids.map((b: any) => Number(b[0]));
 
