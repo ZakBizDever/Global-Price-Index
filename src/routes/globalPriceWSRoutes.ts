@@ -1,5 +1,4 @@
-import { Router } from 'express';
-import GlobalPriceController from '../controllers/globalPriceController';
+import { Router, GlobalPriceController } from '../utils/commonImports';
 
 const router = Router();
 const globalPriceController = new GlobalPriceController();

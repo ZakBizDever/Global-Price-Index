@@ -1,4 +1,4 @@
-import { Request, Response } from 'express';
+import { Request, Response } from '@utils/commonImports';
 import { ExchangeService } from '../services/exchangeService';
 import { GlobalPriceService } from '../services/globalPriceService';
 import { exchanges, ExchangeConfig } from '../config/exchanges';
